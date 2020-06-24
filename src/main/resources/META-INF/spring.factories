@@ -1,7 +1,5 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.vichain.common.config.DataSourceDecryptAutoConfiguration,\
-com.vichain.common.config.TransactionManagerAutoConfiguration,\
-com.vichain.common.config.MyBatisAutoConfiguration,\
-com.vichain.common.config.RedisClientAutoConfiguration,\
-com.vichain.common.config.WebMvcResolverAutoConfiguration,\
-com.vichain.common.config.SystemClientAutoConfiguration
+com.djangson.common.config.TransactionManagerAutoConfiguration,\
+com.djangson.common.config.MyBatisAutoConfiguration,\
+com.djangson.common.config.RedisClientAutoConfiguration,\
+com.djangson.common.config.WebMvcResolverAutoConfiguration
