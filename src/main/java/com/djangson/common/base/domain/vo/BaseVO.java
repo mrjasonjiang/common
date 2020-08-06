@@ -3,6 +3,9 @@ package com.djangson.common.base.domain.vo;
 
 import com.djangson.common.annotation.FieldDesc;
 import com.djangson.common.util.JsonUtil;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.Accessors;
 
 import java.time.LocalDateTime;
 
@@ -11,6 +14,9 @@ import java.time.LocalDateTime;
  * @Author:wangqinjun@vichain.com
  * @Date: 2018/09/20 16:58
  */
+@Getter
+@Setter
+@Accessors(chain=true)
 public abstract class BaseVO<T> {
 
     @FieldDesc("主键")
@@ -36,78 +42,6 @@ public abstract class BaseVO<T> {
 
     @FieldDesc("删除标识")
     protected Integer isDeleted;
-
-    public Long getId() {
-        return id;
-    }
-
-    public T setId(Long id) {
-        this.id = id;
-        return (T) this;
-    }
-
-    public Long getCreateBy() {
-        return createBy;
-    }
-
-    public T setCreateBy(Long createBy) {
-        this.createBy = createBy;
-        return (T) this;
-    }
-
-    public String getCreateName() {
-        return createName;
-    }
-
-    public T setCreateName(String createName) {
-        this.createName = createName;
-        return (T) this;
-    }
-
-    public LocalDateTime getCreateTime() {
-        return createTime;
-    }
-
-    public T setCreateTime(LocalDateTime createTime) {
-        this.createTime = createTime;
-        return (T) this;
-    }
-
-    public Long getUpdateBy() {
-        return updateBy;
-    }
-
-    public T setUpdateBy(Long updateBy) {
-        this.updateBy = updateBy;
-        return (T) this;
-    }
-
-    public String getUpdateName() {
-        return updateName;
-    }
-
-    public T setUpdateName(String updateName) {
-        this.updateName = updateName;
-        return (T) this;
-    }
-
-    public LocalDateTime getUpdateTime() {
-        return updateTime;
-    }
-
-    public T setUpdateTime(LocalDateTime updateTime) {
-        this.updateTime = updateTime;
-        return (T) this;
-    }
-
-    public Integer getIsDeleted() {
-        return isDeleted;
-    }
-
-    public T setIsDeleted(Integer isDeleted) {
-        this.isDeleted = isDeleted;
-        return (T) this;
-    }
 
     @Override
     public String toString() {

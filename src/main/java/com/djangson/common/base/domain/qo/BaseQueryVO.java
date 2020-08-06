@@ -4,6 +4,9 @@ import com.djangson.common.annotation.FieldDesc;
 import com.djangson.common.base.domain.PageInfo;
 import com.djangson.common.constant.Constants;
 import com.djangson.common.util.JsonUtil;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.Accessors;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.util.CollectionUtils;
 
@@ -16,6 +19,9 @@ import java.util.Map;
  * @Date: 2018/9/23 12:34
  * @modified:
  */
+@Getter
+@Setter
+@Accessors(chain=true)
 public abstract class BaseQueryVO<T> {
 
     @FieldDesc("分页条件")
@@ -23,24 +29,6 @@ public abstract class BaseQueryVO<T> {
 
     @FieldDesc("排序条件")
     protected List<BaseQueryOrderVO> queryOrderList;
-
-    public PageInfo getPagingQuery() {
-        return pagingQuery;
-    }
-
-    public T setPagingQuery(PageInfo pagingQuery) {
-        this.pagingQuery = pagingQuery;
-        return (T) this;
-    }
-
-    public List<BaseQueryOrderVO> getQueryOrderList() {
-        return queryOrderList;
-    }
-
-    public T setQueryOrderList(List<BaseQueryOrderVO> queryOrderList) {
-        this.queryOrderList = queryOrderList;
-        return (T) this;
-    }
 
     /**
      * 获取排序字符串

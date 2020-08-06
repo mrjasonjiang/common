@@ -2,12 +2,18 @@ package com.djangson.common.base.domain.vo;
 
 import com.djangson.common.annotation.FieldDesc;
 import com.djangson.common.util.JsonUtil;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.Accessors;
 
 /**
  * @Description: IP地址VO
  * @Author: wangqinjun@vichain.com
  * @Date: 2018/09/20 16:58
  */
+@Getter
+@Setter
+@Accessors(chain=true)
 public class IpRegionVO {
 
     @FieldDesc("IPV4地址")
@@ -24,51 +30,6 @@ public class IpRegionVO {
 
     @FieldDesc("所属运营商")
     private String isp;
-
-    public String getIpv4() {
-        return ipv4;
-    }
-
-    public IpRegionVO setIpv4(String ipv4) {
-        this.ipv4 = ipv4;
-        return this;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public IpRegionVO setCountry(String country) {
-        this.country = country;
-        return this;
-    }
-
-    public String getRegion() {
-        return region;
-    }
-
-    public IpRegionVO setRegion(String region) {
-        this.region = region;
-        return this;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public IpRegionVO setCity(String city) {
-        this.city = city;
-        return this;
-    }
-
-    public String getIsp() {
-        return isp;
-    }
-
-    public IpRegionVO setIsp(String isp) {
-        this.isp = isp;
-        return this;
-    }
 
     @Override
     public String toString() {

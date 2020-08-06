@@ -2,6 +2,9 @@ package com.djangson.common.base.domain.vo;
 
 import com.djangson.common.annotation.FieldDesc;
 import com.djangson.common.util.JsonUtil;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.Accessors;
 
 import java.net.InetSocketAddress;
 import java.util.List;
@@ -11,6 +14,9 @@ import java.util.List;
  * @Author: wangqinjun@vichain.com
  * @Date: 2018/09/20 16:58
  */
+@Getter
+@Setter
+@Accessors(chain=true)
 public class UserSessionVO {
 
     @FieldDesc("客户端编码")
@@ -60,150 +66,6 @@ public class UserSessionVO {
 
     @FieldDesc("用户即时通信登录服务器地址")
     private InetSocketAddress clientAddress;
-
-    public String getClient() {
-        return client;
-    }
-
-    public UserSessionVO setClient(String client) {
-        this.client = client;
-        return this;
-    }
-
-    public String getToken() {
-        return token;
-    }
-
-    public UserSessionVO setToken(String token) {
-        this.token = token;
-        return this;
-    }
-
-    public Long getUserId() {
-        return userId;
-    }
-
-    public UserSessionVO setUserId(Long userId) {
-        this.userId = userId;
-        return this;
-    }
-
-    public String getAccount() {
-        return account;
-    }
-
-    public UserSessionVO setAccount(String account) {
-        this.account = account;
-        return this;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public UserSessionVO setUserName(String userName) {
-        this.userName = userName;
-        return this;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public UserSessionVO setEmail(String email) {
-        this.email = email;
-        return this;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public UserSessionVO setPhone(String phone) {
-        this.phone = phone;
-        return this;
-    }
-
-    public Long getAvatarId() {
-        return avatarId;
-    }
-
-    public UserSessionVO setAvatarId(Long avatarId) {
-        this.avatarId = avatarId;
-        return this;
-    }
-
-    public String getAvatarCode() {
-        return avatarCode;
-    }
-
-    public UserSessionVO setAvatarCode(String avatarCode) {
-        this.avatarCode = avatarCode;
-        return this;
-    }
-
-    public Long getCurrentEntId() {
-        return currentEntId;
-    }
-
-    public UserSessionVO setCurrentEntId(Long currentEntId) {
-        this.currentEntId = currentEntId;
-        return this;
-    }
-
-    public String getCurrentLanguage() {
-        return currentLanguage;
-    }
-
-    public UserSessionVO setCurrentLanguage(String currentLanguage) {
-        this.currentLanguage = currentLanguage;
-        return this;
-    }
-
-    public Integer getIsActive() {
-        return isActive;
-    }
-
-    public UserSessionVO setIsActive(Integer isActive) {
-        this.isActive = isActive;
-        return this;
-    }
-
-    public Integer getIsEnable() {
-        return isEnable;
-    }
-
-    public UserSessionVO setIsEnable(Integer isEnable) {
-        this.isEnable = isEnable;
-        return this;
-    }
-
-    public List<Long> getEnterpriseList() {
-        return enterpriseList;
-    }
-
-    public UserSessionVO setEnterpriseList(List<Long> enterpriseList) {
-        this.enterpriseList = enterpriseList;
-        return this;
-    }
-
-    public List<Long> getRoleList() {
-        return roleList;
-    }
-
-    public UserSessionVO setRoleList(List<Long> roleList) {
-        this.roleList = roleList;
-        return this;
-    }
-
-    public InetSocketAddress getClientAddress() {
-        return clientAddress;
-    }
-
-    public UserSessionVO setClientAddress(InetSocketAddress clientAddress) {
-        this.clientAddress = clientAddress;
-        return this;
-    }
 
     @Override
     public String toString() {
